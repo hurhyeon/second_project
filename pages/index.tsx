@@ -1,8 +1,12 @@
 import React from "react";
 import { NextPage } from "next";
 import TodoList from "../components/TodoList"
-import { TodoType } from "../types/todo";
+// import { TodoType } from "../types/todo";
 
+// interface IProps{
+//   todos:TodoType[];
+// }
+// const TodoList: React.FC<IProps> = () => {
 const todos: TodoType[]=[
   {id:1, text:"마트 가서 장보기", color:"red", checked:false},
   {id:2, text:"숙제하기", color:"orange", checked:false},
