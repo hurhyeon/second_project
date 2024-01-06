@@ -1,7 +1,7 @@
 import React from "react";
 import { useRouter } from "next/router";
 import styled from "styled-components";
-import pallete from "../styles/pallete";
+import pallete from "../styles/palette";
 
 const Container = styled.footer`
   width: 100%;
