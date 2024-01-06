@@ -2,8 +2,8 @@ import { useRouter } from "next/router";
 import React, { useState } from "react";
 import styled from "styled-components";
 import { addTodoAPI } from "../lib/api/todo";
-import BrushIcon from "../public/static/svg/brush.svg";
-import pallete from "../styles/palette";
+import BrushIcon from "../public/statics/svg/brush.svg";
+import pallete from "../styles/pallete";
 import { TodoType } from "../types/todo";
 
 const Container = styled.div`
