@@ -1,7 +1,7 @@
 import React, { useMemo, useCallback } from "react";
 import { useDispatch } from "react-redux";
 import styled from "styled-components";
-import pallete from "../styles/palette";
+import palette from "../styles/palette";
 
 import TrashCanIcon from "../public/static/svg/trash_can.svg";
 import CheckMarkIcon from "../public/static/svg/check_mark.svg";
@@ -21,7 +21,7 @@ const Container = styled.div`
   .todo-list-header {
     padding: 12px;
     position: relative;
-    border-bottom: 1px solid ${pallete.gray};
+    border-bottom: 1px solid ${palette.gray};
 
     .todo-list-last-todo {
       font-size: 14px;
@@ -51,22 +51,22 @@ const Container = styled.div`
     }
   }
   .bg-blue {
-    background-color: ${pallete.blue};
+    background-color: ${palette.blue};
   }
   .bg-green {
-    background-color: ${pallete.green};
+    background-color: ${palette.green};
   }
   .bg-navy {
-    background-color: ${pallete.navy};
+    background-color: ${palette.navy};
   }
   .bg-orange {
-    background-color: ${pallete.orange};
+    background-color: ${palette.orange};
   }
   .bg-red {
-    background-color: ${pallete.red};
+    background-color: ${palette.red};
   }
   .bg-yellow {
-    background-color: ${pallete.yellow};
+    background-color: ${palette.yellow};
   }
 
   .todo-list {
@@ -76,7 +76,7 @@ const Container = styled.div`
       align-items: center;
       width: 100%;
       height: 52px;
-      border-bottom: 1px solid ${pallete.gray};
+      border-bottom: 1px solid ${palette.gray};
 
       .todo-left-side {
         width: 100%;
@@ -88,7 +88,7 @@ const Container = styled.div`
           height: 100%;
         }
         .checked-todo-text {
-          color: ${pallete.gray};
+          color: ${palette.gray};
           text-decoration: line-through;
         }
         .todo-text {
@@ -108,17 +108,17 @@ const Container = styled.div`
         .todo-trash-can {
           width: 16px;
           path {
-            fill: ${pallete.deep_red};
+            fill: ${palette.deep_red};
           }
         }
         .todo-check-mark {
-          fill: ${pallete.deep_green};
+          fill: ${palette.deep_green};
         }
         .todo-button {
           width: 20px;
           height: 20px;
           border-radius: 50%;
-          border: 1px solid ${pallete.gray};
+          border: 1px solid ${palette.gray};
           background-color: transparent;
           outline: none;
         }

@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import pallete from "../styles/pallete";
+import pallete from "../styles/palette";
 
 const Container = styled.div`
   display: flex;
@@ -16,7 +16,7 @@ const Container = styled.div`
 const Header: React.FC = () => {
   return (
     <Container>
-      <h1>Jerrynim's TodoList</h1>
+      <h1>My TodoList</h1>
     </Container>
   );
 };

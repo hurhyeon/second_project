@@ -1,9 +1,1 @@
-[
-    {"id":1 , "text": "장보기" , "color": "red", "checked": false},
-    {"id":2 , "text": "숙제하기기" , "color": "orange", "checked": false},
-    {"id":3 , "text": "코딩하기" , "color": "yellow", "checked": true},
-    {"id":4 , "text": "넥스트" , "color": "green", "checked": true},
-    {"id":5 , "text": "요리" , "color": "blue", "checked": false},
-    {"id":6 , "text": "분리수거" , "color": "navy", "checked": false}
-
-]
+[{"id":1,"text":"장보기","color":"red","checked":false},{"id":2,"text":"숙제하기기","color":"orange","checked":false},{"id":3,"text":"코딩하기","color":"yellow","checked":true},{"id":4,"text":"넥스트","color":"green","checked":true},{"id":5,"text":"요리","color":"blue","checked":false},{"id":6,"text":"분리수거","color":"navy","checked":false},{"id":7,"text":"장보기","color":"orange","checked":false},{"id":8,"text":"할일 ","color":"red","checked":false},{"id":9,"text":"ㅁㄴㅇ","color":"blue","checked":false},{"id":10,"text":"ㅁㄴㅇ","color":"blue","checked":false},{"id":11,"text":"aa","color":"green","checked":false},{"id":12,"text":"asd","color":"blue","checked":false},{"id":13,"text":"asdf","color":"navy","checked":false},{"id":14,"text":"asdf","color":"navy","checked":false},{"id":15,"text":"aa","color":"navy","checked":false},{"id":16,"text":"aa","color":"navy","checked":false},{"id":17,"text":"aa","color":"blue","checked":false},{"id":18,"text":"asdf","color":"navy","checked":false}]

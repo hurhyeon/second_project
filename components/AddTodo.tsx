@@ -2,7 +2,7 @@ import { useRouter } from "next/router";
 import React, { useState } from "react";
 import styled from "styled-components";
 import { addTodoAPI } from "../lib/api/todo";
-import BrushIcon from "../public/statics/svg/brush.svg";
+import BrushIcon from "../public/static/svg/brush.svg";
 import pallete from "../styles/palette";
 import { TodoType } from "../types/todo";
 
@@ -128,7 +128,7 @@ const AddTodo: React.FC = () => {
             )
           )}
         </div>
-        <BrushIcon />
+        {/* <BrushIcon /> */}
       </div>
       <textarea
         value={text}
