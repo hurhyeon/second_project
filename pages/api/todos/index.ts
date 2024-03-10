@@ -2,45 +2,39 @@ import { NextApiRequest, NextApiResponse } from "next";
 import Data from "../../../lib/data";
 
 export default async (req: NextApiRequest, res: NextApiResponse) => {
-  if (req.method === "GET") {
-    try {
-      const todos = await Data.todo.getList();
-      res.statusCode = 200;
-      return res.send(todos);
-    } catch (e) {
-      console.log(e);
-      res.statusCode = 500;
-      res.send(e);
+  try {
+    switch (req.method) {
+      case "GET":
+        const todos = await Data.todo.getList(); // 비동기 처리
+        res.status(200).send(todos);
+        break;
+
+      case "POST":
+        const { text, color } = req.body;
+
+        if (!text || !color) {
+          return res.status(400).send("text 혹은 color가 없습니다.");
+        }
+
+        const todosPost = await Data.todo.getList(); // 비동기 처리
+        const todoId = todosPost.length > 0 ? todosPost[todosPost.length - 1].id + 1 : 1;
+        
+        const newTodo = {
+          id: todoId,
+          text,
+          color,
+          checked: false,
+        };
+
+        await Data.todo.write([...todosPost, newTodo]); // 비동기 처리
+        res.status(201).end();
+        break;
+
+      default:
+        res.status(405).end();
     }
+  } catch (e) {
+    console.error(e);
+    res.status(500).send(e);
   }
-
-  if (req.method === "POST") {
-    //* 값을 받았는지 확인
-    const { text, color } = req.body;
-    if (!text || !color) {
-      res.statusCode = 400;
-      return res.send("text 혹은 color 가 없습니다.");
-    }
-
-    const todos = Data.todo.getList();
-    let todoId: number;
-    if (todos.length > 0) {
-      //* 마지막 투두 id + 1
-      todoId = todos[todos.length - 1].id + 1;
-    } else {
-      todoId = 1;
-    }
-    const newTodo = {
-      id: todoId,
-      text,
-      color,
-      checked: false,
-    };
-
-    Data.todo.write([...todos, newTodo]);
-    res.statusCode = 200;
-    res.end();
-  }
-  res.statusCode = 405;
-  return res.end();
 };

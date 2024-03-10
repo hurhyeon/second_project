@@ -255,13 +255,13 @@ const TodoList: React.FC = () => {
             <div className="todo-right-side">
               {todo.checked && (
                 <>
-                  <TrashCanIcon
+                  <div
                     className="todo-trash-can"
                     onClick={() => {
                       deleteTodo(todo.id);
                     }}
                   />
-                  <CheckMarkIcon
+                  <div
                     className="todo-check-mark"
                     onClick={() => {
                       checkTodo(todo.id);
